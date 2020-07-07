@@ -1,0 +1,412 @@
+<!-- grouper.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Grouper</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<body>
+
+<!-------------------------    Project Info    -------------------------------->
+
+  <div class="bg-black">
+     <div>
+    <img src="work/grouper/groupercover.png" alt="image of grouper" class="w-100 bb ">
+  </div>
+    <div class="pv6-l pv4-ns pa4 ph4-l ph4-ns w-70-l w-100-m w-100-ns center">
+      <div class="center">
+        <h1 class="f6-l lh-big f5 f7-ns white tracked system-sans-serif">UI DESIGN & DESIGN RESEARCH —</h1>
+        <p class="f2 fw3 white system-sans-serif mt1 pt1">Grouper, a white label school organization web app.</p>
+      </div>
+    <div class="cf">
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">MY ROLE</h3>
+        <p class="f4 fw3 white system-sans-serif">UI/UX Designer & Researcher</p>
+      </div>
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">TIMELINE</h3>
+        <p class="f4 fw3 white system-sans-serif">1 Week</p>
+      </div>
+ 
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-------------------------    Problem Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div>
+          <h2 class=" f2 system-sans-serif mt1 pt1">Problem</h2>
+          <p class="f4 fw4 system-sans-serif lh-big">Entering University is an incredibly exciting whirwind for new students but it’s difficult to get accustomed to the information overload one will face when entering a new environment. As a student myself, I remember having a particularly difficult time with information on clubs and events when at orientation.</p>
+        </div>
+      </div>
+
+<!-----    What's the solution    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-40-l">
+          <h2 class="f2 system-sans-serif mt1 pt1">Solution</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Grouper is a digital experience for new students to discover, browse, search, and propose new student organizations right from their own device.
+            <br> <br> Click through my Invision prototype to take an interest quiz, browse groups and discover events happening on campus. 
+        </div>
+        <div class="center pa4-l pl6-l pa0 fl w-100 w-60-l">
+          <iframe align="center" width="438" height="930" src="//invis.io/K9QA0876ZQR" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">How can we help students orient themselves and connect to their new university community?</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!-------------------------    Process Block    ------------------------------->
+
+    <div class="bg-white">
+      <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Process</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 kara-blue">What are the main hurdles in joining a club?</p>
+        </div>
+      </div>
+      <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">Interviews</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">‍I interviewed 6 students on how they discovered events and started organizations (if they had an app or website to guide their process). Some people saw websites centralizing information, but most relied on university emails and facebook searching. 
+            <br> <br> Meeting new people is an important part of college but the jump in discovering organizations to then balancing meeting times and events is not streamlined and confusing. I concluded three problems that I would like to tackle through this experience design exercise. </p>
+        </div>
+      </div>
+
+<!-----    Student Personas   ------->
+
+      <div class="cf mw8 pb5 center">
+        <img class="mw-100 br4 pt2 ph2" src="work/grouper/studentinfo.png">
+      </div>
+      <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+          <p class="f4 fw4 lh-big system-sans-serif">From here I decided to design something that works like a personalized experience to help students get through the process of finding and joining organizations easier, and make it possible for students to maximize their time. Through the Club View, I want to achieve two purposes: 1. Make it easier to see meeting times and add events to personal calendar and 2. Make it easier to discover new clubs and events available to members and non-members.
+    </p></div>
+
+ </p>
+<!-------------------------    Platform    -------------------------------->
+
+ <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">Platform</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">‍In recent years, the assignment system Canvas has been adopted into the workflows of students across most major universities in the US. They allow customization and provide services to hundreds of universities. Their large scale gives them resources to craft a better experience for students than a system an individual school could build itself. I designed Grouper to do the same.<br><br>
+
+          In deciding what platform I will design the experience on, I thought about the different ways universities may adopt this product:</p>
+        </div>
+      </div>
+            <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2 br4">
+          <div class="center ph3 pt3">
+            <img class="mw-100" src="work/grouper/platformoptions.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>PLATFORM:</strong> It is important that we allow universities to customize the look of the apps with their colors and information because different schools have a different number of campuses that categorize their clubs differently.</h1>
+          </div>
+        </div>
+      </div>
+<div class="ph4 pb4 mw7 w-100-m w-100-ns center"> 
+      <div>
+      <p class="f4 fw4 lh-big system-sans-serif">‍After these considerations, building an adaptive web app came out as the best option because It can be embedded into these schools' existing mobile apps and websites, since light student use wouldn't warrent the development of a native app.</p></div>
+</div>
+
+<!-------------------------    Scenarios   -------------------------------->
+
+ <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">User Scenarios</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">‍ Once part of an organization, it’s definitely more efficient to fill out forms and evaluate other members and activities on a larger screen. But while students are on the move, it’s easier to use a mobile app/site to check the times, discover groups and locations of meetings from the palm of their hand.</p>
+        </div>
+</div>
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2 br4 pb4">
+          <div class="center ph3 pt3">
+            <img class="mw-100" src="work/grouper/scenario.png">
+          </div>
+        </div></div>
+
+ <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <p class="f4 fw4 lh-big system-sans-serif">‍ Although the two platforms are equally important, the mobile experience needs more attention on designing a solution that helps students to find these organizations on a device that they have access to, so I decided to start with the mobile screens.
+        </div>
+</div>
+
+
+
+<!-------------------------    Flow    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns w-100-m w-100-ns center">
+      <div class="cf">
+         <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1 white">Lo-Fi User Journey</h2>
+          <p class="f4 fw4 lh-big system-sans-serif white">‍ Users can use their mobile phones to access accurate information about clubs and how to add it to their calendars along with simple navigation of the huge number of opportunities available. They can also fill out the correct forms to organize a new club or organization.</p>
+        </div>
+      </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/grouper/flow.png">
+        </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Visual Guideline   ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Visual Guide</h2>
+        </div>
+        
+        <div class="cf">
+          <div class="center pv2 fl w-100 pr0 pr2-l">
+            <p class="f4 fw4 lh-big system-sans-serif">I designed the system to be as flexible as possible so that Universities can customize the color of their application. Although colors are flexible, for legibilities sake, fonts should stay the same.</strong> </p>
+          </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/grouper/guidelines.png">
+        </div>
+        </div>
+      </div>
+    </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/grouper/logo.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">Grouper aims to make learning about and joining student organizations as intuitive as possible</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Design Decisions    ------------------------------->
+
+    <div class="bg-white">
+      <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Design Decisions</h2>
+        </div>
+
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <h2 class="system-sans-serif mt1 pt1">Personalization Quiz</h2>
+            <p class="f4 fw4 lh-big system-sans-serif">From my interviews on how students discover clubs, students were overwhelmed at the sheer number of clubs and found the search query to be too simple for the multitude of groups. For other smaller schools, overly specific searches lead to little to no results given. If students fill out a personalization assesment before viewing the clubs, it offers directions and suggestions that are applicable to the interest of students.</p>
+          </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/grouper/personalizationquiz.png">
+        </div>
+
+        </div>
+       <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <h2 class="system-sans-serif mt1 pt1">Suggestions Page</h2>
+            <p class="f4 fw4 lh-big system-sans-serif">The suggestions page allows for students to get a curated suggestion of clubs based off of their answers to the personalization quiz. Liking individual clubs will move them to the favorites section of the app. Liking will also add the clubs determined calendar meetings to the students own calendar.</p>
+          </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/grouper/suggested.png">
+        </div>
+
+        </div>
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <h2 class="system-sans-serif mt1 pt1">Club Information</h2>
+            <p class="f4 fw4 lh-big system-sans-serif">Joining a club can be complex and confusing if you don't have the most up to date information. Joining on this app makes it simple because each org has their own page where they can update the information so that potential members can understand when they meet, their requirements and if it fits into their academic schedule.</p>
+          </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/grouper/infopage.png">
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">What I learned:</p>
+          </div>
+          <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">CREATING AN ORGANIZATION</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">Creating an organization was an approach that I thought would fit well within this web application but unfortunately due to time, there is only a low-fidelity mock up of the form submission process (which you can see in the Invision prototype at the top of this page). Though critical to the existence of clubs, finding and thinking about the process of joining a club was most pinnacle.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">DATA</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">Due to the fact that this project was a seven-day design exercise, the design decisions were made based on experiences of my interviewees and myself. Real data would suggest information such as “How many clubs do students actually join during university years?”, "What forms do students need to fill out?" and "How personalized should individual club pages be?"</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">FLEXIBILITY IS KEY</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif"> On the school side, I did my best to design a flexible system to fit different schools and club types, but actually discussing this approach with different schools to understand their needs and challenges could validate some of my assumptions or find out limitations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+              
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>

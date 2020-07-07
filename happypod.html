@@ -1,0 +1,473 @@
+<!-- happypod.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Happy Pod</title>
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/imagesloaded.pkgd.js" as="script">
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+
+   <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<body>
+
+<!-------------------------    Banner Image    -------------------------------->
+
+  <div>
+    <img src="work/makeathon/cover.png" alt="image of happypod" class="w-100 bb bw1 ">
+  </div>
+
+<!-------------------------    Project Info    -------------------------------->
+
+  <div class="bg-black">
+    <div class="pv6-l pv4-ns pa4 ph4-l ph4-ns w-70-l w-100-m w-100-ns center">
+      <div class="center">
+        <h1 class="f6-l lh-big f5 f7-ns white tracked system-sans-serif">FIRST PLACE — MAKEATHON X AUTODESK COMPETITION — FEBRUARY 2019</h1>
+        <p class="f2 fw3 white system-sans-serif mt1 pt1">Happy Pod offers a stress free space for high stress populations.</p>
+      </div>
+    <div class="cf">
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white tracked system-sans-serif">ABOUT MAKEATHON</h3>
+        <p class="f4 fw3 white system-sans-serif">Makeathon's 2019 Product Design Competition gave 52 teams of 5-6 students from many different disciplines the freedom to design and conceptualize a product with 0 restrictions. This year the panel of judges hailed from Autodesk, Amazon, National Instruments, and May Mobility. We placed first for product design and best runner up use of Autodesk's Fusion 360 software.</p>
+      </div>
+      <div class="center pv2 pl4-l fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white tracked system-sans-serif">MY ROLE</h3>
+        <p class="f4 fw3 white system-sans-serif">Product Designer and UX/UI Designer</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-------------------------    Problem Block    ------------------------------->
+
+     <div class="bg-white">
+      <div class="pa4 pt6-l pb6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Problem</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 kara-blue i">Winter blues got you down?</p>
+          <p class="f4 fw4 system-sans-serif lh-big"> College can be a stressful time in a person's life due to the intense pressure to acheive. Students all over the world face these pressures but students in colder climates have to endure long winters and low levels of sunlight being even more prone to those "winter blues". For many college students, poor stress management can lead to a negative impact on physical health with low energy and mood, oversleeping, weight gain, mental health struggles and a decrease in academic performace.</p>
+        </div>
+      </div>
+     </div>
+    </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100"> 
+          <h1 class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-copy">3 out of 4 college students feel at least one stressful episode each week.</h1>
+          <h1 class="f6-l f5 lh-big pl3 f7-ns white tracked system-sans-serif">— HARVARD MED</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!---------------------    Solution & Features    ---------------------------->
+       
+
+<!-----    Features 1    ------->
+
+      <div class="cf pa4 pt6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+        	<h2 class="f2 system-sans-serif mt1 pt1">Solution</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">The Happy Pod is a personalized space featuring an interface where users can adjust the temperature, select guided meditations or music, and utilize a vitamin D light while inside the pod. <br><br>
+          Students enter the pod with an ID scanner. Their Student ID cards give them access to the personalized, relaxing, and private setting that awaits them. 
+              <br><br> The walls of the pod are insulated with sound proofed material and metal making it a phone "dead zone". These materials allow for the pod to be private and secluded away from digital distraction.<br> <br></p>
+          <h3 class="f6-l ttu f7-ns fw8 tracked system-sans-serif">Featuring</h3>
+         <p class="f4 fw4 lh-big system-sans-serif">—LCD nature "windows"<br>
+         	—UV sanitation light cycle<br>
+         	—Smartphone "dead zone"<br>
+         	—Sound proofed walls<br>
+         —Wheelchair accessible ramp</p>
+        </div>
+        <div class="center pl4-l pt5-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/makeathon/podpics.png">
+        </div>
+        </div>
+      </div>
+
+<!-------------------------    Interface Outline    -------------------------------->
+  <div>
+    <img src="work/makeathon/overview.png" alt="interfaces" class="w-100">
+  </div>
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1">Process</h2>
+        </div>
+        
+        <div class="cf">
+        </div>
+      </div>
+<!-----    Competitive Analysis    ------->
+            <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+           <h3 class="f6-l f7-ns fw8 tracked system-sans-serif">WHAT CURRENTLY EXISTS?</h3>
+          <p class="f4 fw4 lh-big system-sans-serif">Our team of 4 UX Researchers conducted a broad competitive analysis in order to look at current offerings around campus for student wellness and stress relief. We looked into a number of competitors like guided meditation platforms, vitamin-D lights, self help books, coloring books and retreat centers.<br><br> We used the U of M Counciling and Psychological Services (CAPS) office as our springboard as it provides students a wellness space offering massage chairs and stretching rooms — but with many user pain points.<br><br>
+        </div>
+      </div>
+<!-----    Competitive Analysis    ------->
+      <div class="cf mw8 pb5 center">
+        <div class="cf pa4 br4 bg-white">
+          <div class="cf mw7 center">
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">INSIGHT I</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Current Wellness Center lacks privacy and forces students to schedule appointments by phone in advance.</p>
+            </div>
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">INSIGHT II</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">CAPS Wellness center is open during times that students are in class, not at night when stress commonly sets in.</p>
+            </div>
+        </div>
+        </div>
+      </div>
+
+<!-----    Ideation    ------->
+
+      <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h3 class="f6-l f7-ns fw8 tracked system-sans-serif">IDEATION & INTERVIEWS</h3>
+          <p class="f4 fw4 lh-big system-sans-serif">We used a design process that featured  detailed, yet extensive methods to create and filter through ideas without judgement or holds barred. As such, we started by throwing out as many ideas as possible, no matter how far out.<br><br>
+          Among our weirdest ideas were a shoulder tickling device to prevent slouching, a natural spectrum light that would activate when recieving a text, and an IOT yoga mat. <br><br>
+
+          We then moved into interviewing 7 potential users to help inform ourselves on what people like, how they de-stress and what they currently use to escape the hustle and bustle of University life. This qualitative information allowed us to build out personas to inform the design of The Happy Pod.</p>
+        </div>
+      </div>
+
+<!-----    happy Pod user / ideation image    ------->
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2 br4 shade">
+          <div class="center ph3 pt3">
+            <img class="mw-100" src="work/makeathon/happypodideation.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>OUR USERS:</strong> After Ideating concepts, we decided to design for university populations. We focused on both students and professors for this product design but can imagine this concept providing a solution in high-stress workplaces too.</h1>
+          </div>
+        </div>
+      </div>
+
+
+<!-----    Interview insights    ------->
+      <div class="cf mw8 pb5 center">
+        <div class="cf pa4 br4 bg-white">
+          <div class="cf mw7 center">
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">INTERVIEW INSIGHT I</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Everyone destresses differently. Some like yoga, others listen to music, nap, get to nature, practice breathing exercises, or less productive ways.</p>
+            </div>
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">INTERVIEW INSIGHT II</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Students lack private space on campus. 87% of students have roommates and lack a private space in which they can unwind.</p>
+            </div>
+        </div>
+        </div>
+      </div>
+<!----- Branding ------->
+      <div class="ph4 pb5 mw7 w-100-m w-100-ns center">
+        <div>
+           <h3 class="f6-l f7-ns fw8 tracked system-sans-serif">BRANDING</h3>
+          <p class="f4 fw4 lh-big system-sans-serif">I was in charge of branding for this project. I wanted to use colors in the brand that were bright, inviting and positive. The Happy Pod logo plays off of a smile shape to reflect the name and make users smile. Below is my branding guidelines along with UI font sizes for the control panel on the inside of the pod.<br><br></p>
+ 		<div class="cf ">
+          <div class="cf mw7 center">
+            <div class="center fl w-100 w-100-l">
+          <img class="br3 drop-shadow" src="work/makeathon/visualguideline.png">
+        	</div>
+    	</div>
+       </div>
+       </div>
+  	  </div>
+
+<!-----  Product Design    ------->
+            <div class="ph4 pb4 mw7 w-100-m w-100-ns center"><div>
+           <h3 class="f6-l f7-ns fw8 tracked system-sans-serif">PRODUCT DESIGN</h3>
+          <p class="f4 fw4 lh-big system-sans-serif">I also took on the task of creating a 3D product model. Prior to Makeathon, I never had any CAD experience but I taught myself how to design, prototype, and render a 3D model in under 36 hours (with thanks to LOTS of coffee). Our team won first place but on top of that, my 3D prototype with AutoDesk's Fusion 360 software won us an additional prize for best runner up use of CAD software across all teams in the competition!
+
+        </div>
+      </div>
+
+<!-----    Image 02    ------->
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf center ph2 pt2 br4 shade">
+          <div class="cf center ph3 pt3">
+            <img class="cf mw-100 center" src="work/makeathon/prototypeimg.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>3D Model:</strong>The walls of the pod are constructed of durable lightweight aluminum, the outside is wood and are retrofitted with soundproofing. </h1>
+          </div>
+        </div>
+      </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr0 pr2-m pr6-l fl w-third-l w-third-m w-100">
+          <img class="br-100" src="work/makeathon/rotation.gif">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100"> 
+          <h1 class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-copy">"How can we best mitigate stress in student populations?"</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pb6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Refining the Interface</h2>
+        </div>
+
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <h3 class="f6-l f7-ns fw8 system-sans-serif">OVERVIEW</h3>
+            <p class="f4 fw4 lh-big system-sans-serif">The first draft of the interface was created for the competition by another teammate, but I knew it needed significant improvement as the control panel is the crux of the Happy Pod experience. <br><br>
+            I went back and iterated the design based on insights from user testing and leveraging the standardized visual guideline I created during the competition along with Apple's Human Interface Guidelines.</p>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+
+<!-------------------------    UI Problems    -------------------------------->
+  <div>
+    <img src="work/makeathon/uiproblems.png" alt="ui before and after" class="w-100">
+  </div>
+
+
+<!-----    Climate   ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Environment Selection</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">If you could go anywhere, where would you go? Happy Pod visitors can choose different environment videos to  be displayed on the pod’s LCD “Windows”.</p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/makeathon/environment.gif">
+        </div>
+      </div>
+
+<!-----    Audio    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Audio Controls</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Happy Pod offers nature sounds and meditations to guide it’s users in destressing, breathing and escaping the hustle and bustle of student life.</p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/makeathon/audio.png">
+        </div>
+      </div>
+
+<!-----    Environment    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Climate Controls</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Happy Pod visitors can alter the internal temperature of the pod along with the fan strength to ensure a comfortable environment. </p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/makeathon/climate.gif">
+        </div>
+      </div>
+
+
+
+<!-----    Lighting    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu">Lighting Selection</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Happy Pod radiates both a vitamin D light while users are in the pod and a cleansing UV light after each visitor. Color tone and brightness of the light in the pod can be set for different preferences.</p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/makeathon/lighting.gif">
+        </div>
+      </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">What I learned:</p>
+          </div>
+          <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">COMMUNICATION IS KEY</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">There were 6 people on the team, and working together to produce a cohesive vision required strong communication and open feedback.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">TEAM EFFICIENCY</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">As the competition was only 36 hours, we needed to share and critique each others work in real time. Tools like Slack and Google Drive were critical for real time success.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">FAILING QUICKLY</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">Failing quickly and considering tradeoffs allowed me to think critically about product decisions and make efficient progress under our time constraints.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-------------------------    Team Photo    -------------------------------->
+  <div>
+    <img src="work/makeathon/teammakeathon.png" alt="team photo" class="w-100">
+  </div>
+
+
+
+</body>
+
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+              
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>

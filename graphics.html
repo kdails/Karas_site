@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+	<head id="top">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+		<title>Graphics</title>
+		<!-- Responsive Web Design -->
+		<meta name="description" content="Hi, I'm Kara, a UX Designer located in Ann Arbor, recently graduated from the University of Michigan with my Masters in Information Science and Human Computer Interaction." />
+		<meta name="keywords" content="portfolio, michigan, UMSI, UX Design, Designer, UI, Research" />
+		<meta name="author" content="Kara Dailey" />
+		<meta property="og:image" content="https://karadailey.com/home.png" />
+  		<meta name="twitter:image" content="https://karadailey.com/home.png" />
+		<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+		<link rel="stylesheet"href="css/style.css" type="text/css"  />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		    /* Scroll button appears on scroll */
+		    $(window).scroll(function(){
+		      if ($(this).scrollTop() > 20) {
+		          $('#scrollTop').removeClass('no-display');
+		      } else {
+		          $('#scrollTop').addClass('no-display');
+		      }
+		    });
+
+		    /* Smooth Scrolling */
+		    $(document).ready(function(){
+		      $("a").on('click', function(event) {
+		        if (this.hash !== "") {
+		            event.preventDefault();
+		            var hash = this.hash;
+		            $('html, body').animate({
+		                scrollTop: $(hash).offset().top
+		            }, 500, function(){
+		                window.location.hash = hash;
+		            });
+		        }
+		      });
+		    });
+
+		    /* Back button appears on scroll */
+		    $(window).scroll(function(){
+		      if ($(this).scrollTop() > 20) {
+		          $('#back').removeClass('no-display');
+		      } else {
+		          $('#back').addClass('no-display');
+		      }
+		    });
+		</script>
+
+		<!-- Webpage Icons -->
+		<link rel="icon" type="image/x-icon" href="klogo.ico"/>
+		<link rel="icon" type="image/png" href="klogo.png"/>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-113009253-1');
+		</script>
+
+	</head>
+<!-- WEBPAGE -->
+
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+ 
+<body class="">
+<main class="w-100 cf helvetica dark-gray bg-white pa3 pa4-m pa1-l pt5-l mw9 center">
+    <div class=" content fl w-100 w-75-l pr2 pr3-l mb3 mb4-l">
+      <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/finalsketch.png) center;"></div>
+    </div>
+    <div class="fl w-50 w-25-l pr2 pr0-l pl3-l mb3 mb4-l">
+        <div class="cover center pv6 pv6-m pv7-l" style="background:black url(work/designs/cruft.jpeg) center;"> </div>
+      </div>
+    <div class="fl w-50 w-25-l pl2 pl0-l pr2-m pr3-l mb3 mb4-l">
+      <div class="cover pv6 pv6-m pv7-l" style="background:white url(work/designs/girlpool.png) center;"> </div>
+    </div>
+    <div class="fl w-100 w-50-l pr2-l pl2-ns mb4 mb0-l mb4 outline">
+      <div class="pa4">
+        <h1 class="f4 f2-l fw7 mt0 pv3-l bb-l bb--black">Kara's Graphic Designs</h1>
+        <p class="lh-copy mt2 mt3-m mt5-l f6">
+          <span class="db-ns f6 fw7 lh-solid mb3 mb0-m mb4-l">I believe that..</span> 
+          <span class="fw9 f6 f1-l db lh-title mb3 mb4-l">Graphic Design is organization of information</span>
+          <span class="db-l measure-wide">
+          Here lies a series of illustrations, graphic exercises, and extraneous designs for clients & personal use over the past few years.
+        </span>
+        </p>
+      </div>
+    </div>
+    <!--First Chunk -->
+    <div class="cf">
+      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/final.png) center;"> </div>
+      </div>
+      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/mcna.gif) center;"> </div>
+      </div>
+      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/tired.png) center;"> </div>
+      </div>
+      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/home.gif) center;"> </div>
+      </div>
+      <div class="fl w-50 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/threed.png) center;"> </div>
+      </div>
+    <div class="fl w-50 w-25-l pl2 pl0-l pr2-m pr3-l mb3 mb4-l">
+      <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/poster.png) center;"> </div>
+    </div>  
+      <div class="fl w-100 w-75-l pv0 mv0">
+        <div class="fl w-100 mb2 mb4-l">
+          <div class="cover pv6 pv7-l" style="background:black url(work/designs/book.png) center;"> </div>
+        </div>
+      </div>
+      <div class="cf fl w-100 w-100-l pv0 mv0">
+        <div class="fl w-25-l w-50-m w-100 mb2 mb4-l">
+          <div class="cover pv7 pv6-m pv7-l" style="background:black url(work/designs/walks.png) center;"> </div>
+        </div>
+        <div class="fl w-25-l w-50-m w-100 mb2 pl4-l mb4-l pl2 pl0-l pr2-m pr3-l mb3">
+          <div class="cover pv7 pv6-m pv7-l" src="work/designs/kara.jpg" style="background:black url(work/designs/ugly.png) center;"> </div>
+        </div>
+        <div class="fl w-50-l w-100 pl2 pl4-l mb2 mb4-l">
+            <div class="cover pv5 pv6-m pv7-l" style="background:black url(work/designs/ispy.png) center;"> </div>
+        </div>
+        <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:white url(work/designs/blade.png) center;"> </div>
+      </div>
+      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/twist.gif) center;"> </div>
+      </div>
+      <div class="fl w-100 w-50-l pl3-l mb3 mb4-l">
+          <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/POSTING.png) center;"> </div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <!--Second Chunk -->
+
+    <div class=" content fl w-50 pr2 pr3-l mb3 mb4-l">
+      <div class="cover pv5 pv6-m pv7-l" style="background:black url(work/designs/postcard.png) center;"></div>
+    </div>
+    <div class="fl w-50 w-25-l pl2 pr2-m ph2-l mb3 mb4-l">
+      <div class="cover pv5 pv6-m pv7-l" style="background:black url(work/designs/augu.png) center;"> </div>
+    </div>
+    <div class="fl w-50 w-50 w-25-l pr2 pr0-l pl3-l mb3 mb4-l">
+        <div class="cover center pv5 pv6-m pv7-l" style="background:black url(work/designs/bean.gif) center;"> </div>
+      </div>
+    <div class="fl w-50 w-50 w-25-l pl2 pl0-l pr2-m pr3-l mb3 mb4-l">
+      <div class="cover pv5 pv6-m pv7-l" style="background:white url(work/designs/nappost.png) center;"> </div>
+    </div>
+    <div class="fl w-100 w-50-l pr2-l pl2-ns mb4 mb0-l mb4">
+      <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/img.png) center;"> </div>
+    </div>
+    <div class="cf">
+      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+          <div class="cover pv7 pv6-m pv7-l" style="background:black url(work/designs/grouper.gif) center;"> </div>
+      </div>
+    <div class="fl w-100 w-25-l pl0-l pr2-m pr3-l mb3 mb4-l">
+      <div class="cover pv6 pv6-m pv7-l" style="background:black url(work/designs/okok.png) center;"> </div>
+    </div>  
+      <div class="fl w-100 w-75-l pv0 mv0">
+        <div class="fl w-100 mb2 mb4-l">
+          <div class="cover pv6 pv7-l" style="background:black url(work/designs/moocsketch.png) center;"> </div>
+        </div>
+      </div>
+      <div class="cf fl w-100 w-100-l pv0 mv0">
+        <div class="fl w-30-l w-50-m w-50 mb2 mb4-l">
+          <div class="cover pv5 pv6-m pv7-l" style="background:black url(work/designs/lojack.png) center;"> </div>
+        </div>
+        <div class="fl w-30-l w-50-m w-50 mb2 pl4-l mb4-l">
+          <div class="cover pv5 pv6-m pv7-l" src="work/designs/kara.jpg" style="background:white url(work/designs/rift.png) center;"> </div>
+        </div>
+        <div class="fl w-40-l w-50-m w-50 pl2 pl4-l mb2 mb4-l">
+            <div class="cover pv5 pv6-m pv7-l" style="background:white url(work/designs/mcna.png) center;"> </div>
+        </div>
+             <div class="fl w-30-l w-50-m w-50 pl2 pl4-l mb2 mb4-l">
+            <div class="cover pv5 pv6-m pv7-l" style="background:white url(work/designs/viz.jpg) center;"> </div>
+        </div>
+        <div class="fl w-30-l w-50-m w-50 pl2 pl4-l mb2 mb4-l">
+            <div class="cover pv5 pv6-m pv7-l" style="background:white url(work/designs/RiftS.png) center;"> </div>
+        </div>
+        <div class="fl w-40-l w-50-m w-50 pl2 pl4-l mb2 mb4-l">
+            <div class="cover pv5 pv6-m pv7-l" style="background:white url(work/designs/tile.gif) center;"> </div>
+        </div>
+        
+      </div>
+      </div>
+    </div>
+</main>
+		<script src="js/charming.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+              
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>

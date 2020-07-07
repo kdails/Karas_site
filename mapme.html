@@ -1,0 +1,634 @@
+<!-- mapme.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>MapMe</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+<body>
+
+<!-------------------------    Banner Image    -------------------------------->
+
+  <div>
+    <img src="work/mapme/mapmecover.png" alt="image of mapme" class="w-100 bb bw1 ">
+  </div>
+
+<!-------------------------    Project Info    -------------------------------->
+
+  <div class="bg-black">
+    <div class="pv6-l pv4-ns pa4 ph4-l ph4-ns w-70-l w-100-m w-100-ns center">
+      <div class="center">
+        <h1 class="f6-l lh-big f5 f7-ns white tracked system-sans-serif">FALL 2019 — UI DESIGN, DESIGN RESEARCH, PHYSICAL PROTOTYPING</h1>
+        <p class="f2 fw3 white system-sans-serif mt1 pt1">MapMe aims to improve grocery shopping through pervasive interaction design methods</p>
+      </div>
+    <div class="cf">
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">MY ROLE</h3>
+        <p class="f4 fw3 white system-sans-serif">UI/UX Designer & Prototype Engineer</p>
+      </div>
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">TEAM</h3>
+        <p class="f4 fw3 white system-sans-serif">2 UX Researchers & 1 Project Manager</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-------------------------    Problem Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pb6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Problem</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 kara-blue i">Where the heck are the pickles??</p>
+          <p class="f4 fw4 system-sans-serif lh-big">Not sure about you, but most of my grocery trips now-a-days look something like :</p>
+        </div>
+      </div>
+      <div class="w-70 center">
+        <img class="center" src="work/mapme/isometric.png">
+      </div>
+       <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <p class="f4 pb6-l fw4 lh-big system-sans-serif">People want to enjoy their shopping experience but become confused and frustrated when navigating grocery aisles in search of items they can’t locate.  In our information age, ethically applying ubiquitous computing and sensor based technologies to the grocery experience could save users time and money while enhancing efficiency. </p>
+        </div>
+      </div>
+    </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">How might we design a mobile app to help patrons explore and easily locate items in store?</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!---------------------    Solution & Features    ---------------------------->
+
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pb6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Solution & Functionality</h2>
+          <p class="f4 fw4 system-sans-serif lh-big">In order to address the common problem of complex layouts and option overload at the store, we designed a mobile app to help grocery patrons easily explore and locate its variety of items.</p>
+        </div>
+      </div>
+       
+
+<!-----    Features 1    ------->
+
+       <div class="cf pa4 pa4-ns mw9 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1 ttu "> Search for Item</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">In the MapMe application, list creation not only acts as a way to organize a grocery trip, it’s also used as a means for navigation. We centralized our design around the list because nearly 85% of our research participants brought either a physical or digital list to their grocery shop. 
+            <br> <br> The list gives users the freedom to add items they’re both familiar and and unfamiliar with even before they step into the store. </p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/mapme/listmaking.gif">
+        </div>
+      </div>
+
+<!-----    Features 2    ------->
+
+      <div class="cf pa4 pa4-ns mw9 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1 ttu ">Syncing to Cart</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">All of our users noted that they preferred using their own device at the store.  
+              <br><br> Users simply scan the Cart’s QR code via their own smartphone camera. Scanning the QR code initializes the backend of the MapMe system, anonymizing the user and protecting their privacy. </p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/mapme/connect.gif">
+        </div>
+      </div>
+
+
+<!-----    Features 3    ------->
+
+       <div class="cf pa4 pa4-ns mw9 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1 ttu ">Aisle Navigation</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Nearly 85% of our research participants brought either digital or physical lists to the store.
+            <br> <br> In MapMe, list creation not only acts as a way to organize a grocery trip, it’s also used as a means for navigation.
+            <br> <br> The list gives users the freedom to add items they’re both familiar and and unfamiliar with even before they step into the store.
+        </div>
+        <div class="center pb6-l pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3" src="work/mapme/navigate.gif">
+        </div>
+      </div>
+
+    </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr0 pr2-m pr6-l fl w-third-l w-third-m w-100">
+          <img src="work/mapme/bags.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100"> 
+          <h1 class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-copy">82% of people in the United States visit the grocery store every week.</h1>
+          <h1 class="f6-l f5 lh-big pl3 f7-ns white tracked system-sans-serif">2019 Gallup Poll</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Design Research</h2>
+        </div>
+        
+        <div class="cf">
+          <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+            <h3 class="f6-l f7-ns fw8 system-sans-serif">PRIMARY RESEARCH</h3>
+            <p class="f4 fw4 lh-big system-sans-serif">User Observation / Interviews <br> User Enactments <br> Cultural Probe Exercise</p>
+          </div>
+          <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+            <h3 class="f6-l f7-ns fw8 system-sans-serif">SECONDARY RESEARCH</h3>
+            <p class="f4 fw4 lh-big system-sans-serif">Online Research <br> Heuristic Analysis <br> Analogous Product Analysis </p>
+          </div>
+        </div>
+      </div>
+       
+      <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">Cultural Probe</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">We wanted to think through our potential design space so we initially observed users at 4 suburban Detroit grocers. We wanted to know how and why people moved around aisles so erratically so we leveraged a cultural probe and follow up interviews. </p>
+        </div>
+      </div>
+
+<!-----    Image 01    ------->
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2 br4 shade">
+          <div class="center ph3 pt3">
+            <img class="mw-100" src="work/mapme/cultural-probe.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>CULTURAL PROBE:</strong> This workbook was given to 6 participants to record their navigation along with the peaks and pits of their experience. Probe completion was followed by an interview.</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf pa4 br4 bg-white">
+          <div class="cf mw7 center">
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">PROBE INSIGHT I</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Shoppers had difficulties finding every item or remembering to pick items up along the way, forcing them to waste time and backtrack.</p>
+            </div>
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">PROBE INSIGHT II</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Participants would like to know if something they plan to buy is out of stock.</p>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">User Enactments</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">We listed several research questions regarding interface preference, navigation method, and substitute suggestions to focus our research and better design and experiment with user enactments.  </p>
+        </div>
+      </div>
+
+<!-----    Image 02    ------->
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2 br4 shade">
+          <div class="center ph3 pt3">
+            <img class="mw-100" src="work/mapme/user-enactment.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>USER ENACTMENT:</strong> We chose five scenarios to simulate in order to shed light on potential design opportunities including navigation preferences, search and list creation options. </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <p class="f4 fw4 lh-big system-sans-serif">Based on the results of user enactments and notes we collected from the follow-up interviews, we received six key insights, and we chose the two most important insights to inform our key features in our later prototype.</p>
+        </div>
+      </div>
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf pa4 br4 bg-white">
+          <div class="cf mw7 center">
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">ENACTMENT INSIGHT I</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Participants prefer using their own devices with a simplistic birds-eye view of the store, rather than turn by turn navigation directions.</p>
+            </div>
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">ENACTMENT INSIGHT II</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">All participants were eager to see a coupon system integrated with the list that offers users personalized sales when in store.</p>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="ph4 pb4 pb6-l mw7 w-100-m w-100-ns center">
+        <div class="center tc">          
+          <a class="f6-l  f7-ns no-underline fw8 center tc kara-blue system-sans-serif" href="https://612-smartcart.github.io/milestone-3/index.html">CLICK HERE FOR MORE DOCUMENTATION</a>
+        </div>
+      </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">"I always bring my shopping list with me to the grocery store".</p>
+          <h1 class="f6-l f5 lh-big pl3 f7-ns white tracked system-sans-serif">USER INTERVIEW 4</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Define and Ideate    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Define & Ideate</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 kara-blue i">A new way to shop.</p>
+        </div>
+        
+        <div class="cf">
+          <div class="center pv2 fl w-100 pr0 pr2-l">
+            <h3 class="system-sans-serif mt1 pt1">DESIGN OPPORTUNITY</h3>
+            <p class="f4 fw4 lh-big system-sans-serif">Based on research, we identified our design opportunity:
+                <br> <strong> How might we design a mobile app to help patrons explore & easily locate items? </strong> </p>
+          </div>
+        </div>
+      </div>
+       
+
+<!-----    Ideation    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-40-l">
+          <h2 class="system-sans-serif mt1 pt1">Ideation</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">With the design opportunity in mind, we moved forward to ideation. We experimented with various methods to display the available items online, visualize the grocery space, and provide visual aids for navigation. </p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-60-l">
+          <img class="br3" src="work/mapme/ideation.png">
+        </div>
+      </div>
+
+<!-----    Technical    ------->
+
+      <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-40-l">
+          <h2 class="system-sans-serif mt1 pt1">Technical Feasibility</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Meanwhile, we also looked into the technical feasibility of our idea. Indoor navigation can be supported through  bluetooth beacon technology. The beacon broadcasts a signal in a general area and devices with the associated app can receive location information. Each beacon costs about $40-$60. </p>
+        </div>
+        <div class="center pb6-l pa4-l pa0 fl w-100 w-60-l">
+          <img class="br3" src="work/mapme/beacon.png">
+        </div>
+      </div>
+
+    </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">"Bluetooth beacons can track your location accurately from a range of inches to about 50 meters</p>
+          <h1 class="f6-l f5 lh-big pl3 f7-ns white tracked system-sans-serif">— NEW YORK TIMES</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Refine & Define</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 kara-blue i">Designing the system</p>
+        </div>
+
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <h3 class="system-sans-serif mt1 pt1">OVERVIEW</h3>
+            <p class="f4 fw4 lh-big system-sans-serif">After ideation, we decided on 4 main features for our app: Home, Map, coupons, and Profile. Below is an overview of my building and refining process for the two main flows:</p>
+          </div>
+
+          <div class="cf center">
+            <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">FLOW I</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Explore the grocery store by list</p>
+            </div>
+            <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">FLOW II</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">Navigate to a specific item in map</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      
+    </div>
+       
+<!-----    Ideation    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1">Visual Guideline</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">The first step of prototyping was to create a visual style guideline that is shared across our app. The visual style aims at creating a calm, open and clean personality while also honoring the original branding of our target store, Meijer. </p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3 drop-shadow" src="work/mapme/guidelines.png">
+        </div>
+      </div>
+
+<!-----    Ideation    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1">Test & Iterate</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">After setting the visual guideline, I created prototypes and iterated the design based on insights from user testing.</p>
+        </div>
+        <div class="center pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3 drop-shadow" src="work/mapme/drafts.png">
+        </div>
+      </div>
+
+<!-----    Ideation    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1">Consistency with Architecture</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">We had to make sure that the current design could be supported by existing store infrastructure. This graphic explains how information should be exchanged between user and the store’s inventory via beacons.</p>
+        </div>
+        <div class="center pb6-l pa4-l pa0 fl w-100 w-70-l">
+          <img class="br3 drop-shadow" src="work/mapme/arch.png">
+        </div>
+      </div>
+
+    </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">What I learned:</p>
+          </div>
+          <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">TEAM EFFICIENCY</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I learned to use methods such as shared to-do-lists and critique documentation to organize the team's progress and improve efficiency.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">COMMUNICATION</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I matured my skill to assertively communicate with my team in a timely manner and address disagreement with mutual compromise.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">FAILING FAST</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I learned to fail fast and give bold ideas that seem to be challenging but potentially fruitful a try, even if success doesn’t come at first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Building a physical prototype</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 kara-blue i">Trying my hand at C++</p>
+        </div>
+
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <p class="f4 fw4 lh-big system-sans-serif">We had to meet specific computer hardware requirements for our prototype. As product designer and engineer for my team I decided to use a particle photon microcontroller for the wizard of oz experience. The photon is placed in a box on the shopping cart where I wrote C++ code to turn the LED light green when the QR was scanned, signaling a successful connection to the beacon network.</p>
+          </div>
+
+        </div>
+      </div>
+      
+       
+<!-----    Image 01    ------->
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2 br4 shade">
+          <div class="center ph3 pt3">
+            <img class="mw-100" src="work/mapme/cart.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5  system-sans-serif"><strong>PHYSICAL PROTOTYPE:</strong> Our prototype is comprised of an interactive Invision prototype to act as the smartphone application, a smart cart, and physical products & props to simulate a grocery store.</h1>
+          </div>
+        </div>
+      </div>
+
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-custom-blue">
+      <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <p class="f4 fw4 lh-big system-sans-serif">The below video gives an overview of use with our mid-fidelity mobile design. </p>
+            <div class="center">
+            <iframe class="center pb6-l" width="100%" height="400" src="https://www.youtube.com/embed/eHc_DfQ_DlY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 pr2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1">Where to improve:</p>
+          </div>
+          <div class="center pv2 pl5-l pl5-m fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">IMPROVE MAP DESIGN</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I would like to conduct more user testing and iterate on the map design including the label and graphics.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">PRIVACY CONSIDERATION</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">Privacy remains a concern with a system like this. This data in the hands of advertisers and stores could be used in a malevolent way. We gave users a clear and explicit way to disconnect their phone from the grocery cart, but users can also be tracked every step of the way through the store via the cart. Further research is required to see how much this bothers our target users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+              
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>

@@ -1,0 +1,473 @@
+<!-- incentivize.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Incentivize</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<body>
+
+<!-------------------------    Banner Image    -------------------------------->
+
+  <div>
+    <img src="work/incentivize/titleimg.png" alt="image of mapme" class="w-100 bb bw1 ">
+  </div>
+
+<!-------------------------    Project Info    -------------------------------->
+
+  <div class="bg-black">
+    <div class="pv6-l pv4-ns pa4 ph4-l ph4-ns w-70-l w-100-m w-100-ns center">
+      <div class="center">
+        <h1 class="f6-l lh-big f5 f7-ns white tracked system-sans-serif">UI/UX DESIGN, DESIGN RESEARCH — </h1>
+        <p class="f2 fw3 white system-sans-serif mt1 pt1">Incentivize — The motivation support network</p>
+      </div>
+    <div class="cf">
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">OVERVIEW</h3>
+        <p class="f4 fw3 white system-sans-serif">An application for group based and community driven motivation, promoting a balance between work and play.</p>
+      </div>
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">MY ROLE</h3>
+        <p class="f4 fw3 white system-sans-serif">User Experience Designer & Researcher</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-------------------------    Problem Block    ------------------------------->
+
+    <div class="bg-washed-blue">
+      <div class="pa4 pt6-l pb6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Problem</h2>
+          <p class="f4 fw4 system-sans-serif lh-big">Stemming from my experiences as a college level student — productivity is typically individually motivated; students are in control of the choices that are made to affect productivity outcomes. This is often an isolating experience, people who are exceptionally busy may miss out on social activities outside of school with friends and family. 
+            <br><br>We as humans crave human connection and sometimes everyday tasks get in the way. This sad reality is a problem, and Incentivize is a solution. </p>
+        </div>
+      </div>
+    </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">How might we design a solution to get people excited to do what they struggle with?</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!-------------------------    Design Research Block    ------------------------------->
+
+    <div class="bg-washed-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Solution</h2>
+        </div>
+
+        <div class="cf">
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <h3 class="f6-l f7-ns fw8 system-sans-serif">OVERVIEW</h3>
+            <p class="f4 fw4 lh-big system-sans-serif">Incentivize allows for people to support others in their network with tasks, work and goals that they struggle with. The main goal of the application is to push other people to be better than they were the day before through mutually beneficial incentives.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-----    Motivation Center   ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">The Motivation Center</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">The motivation center acts as a homepage for users to see what goals their friends have, what they're looking to accomplish and other users interactions with them. When users ask for an incentive they show up on this page chronologically.</p>
+        </div>
+        <div class="center pl6-l pa0 fr w-100 w-70-l">
+          <img class="br3" src="work/incentivize/motivation.gif">
+        </div>
+      </div>
+
+      <!-----    Incentive    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Incentivize a Friend</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Offering friends incentives to complete their goals like a coffee date or quality time are small gestures that help motivate the asker while also giving the incentivizer an opportunity to socialize.</p>
+        </div>
+        <div class="center pl6-l pa0 fr w-100 w-70-l">
+          <img class="br3" src="work/incentivize/incentive.gif">
+        </div>
+      </div>
+
+
+      <!-----    Editing Profile    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Edit your Profile</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Users are able to edit their bio and profile image to make the platform more fun and personalized. The goal of Incentivize needs to foster a sense of community and kindness in order to be successful. Studies show that putting a face to a profile promotes trust and healthier interactions. </p>
+        </div>
+        <div class="center pl6-l pa0 fr w-100 w-70-l">
+          <img class="br3" src="work/incentivize/profile.gif">
+        </div>
+      </div>
+
+      <!-----    Ask for Motivation    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Ask for Motivation</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Incentivize is not a one sided application. Asking for help from peers is equally as important. The gif shows how one might ask for motivation with suggestions of incentives that they like. </p>
+        </div>
+        <div class="center pl6-l pa0 fr w-100 w-70-l">
+          <img class="br3" src="work/incentivize/askformoti.gif">
+        </div>
+      </div>
+
+
+      <!-----    Editing Profile    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif fw6 f5 ttu ">Accept an Incentive</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Users are able to accept incentives when their peers submit them. This is done in the format of a message because it's personal and allows for conversation if the incentive needs to be adjusted or changed.</p>
+        </div>
+        <div class="center pb6-l pl6-l pa0 fr w-100 w-70-l">
+          <img class="br3" src="work/incentivize/messages.gif">
+        </div>
+      </div>
+
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/incentivize/logo.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">If you dangle a carrot in front of someone or offer them a carrot, you are trying to persuade them into action by offering them a reward.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!-------------------------    Process Block    ------------------------------->
+
+    <div class="bg-washed-blue">
+      <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Design Research Process</h2>
+        </div>
+
+        <div class="cf">
+          <h2 class="system-sans-serif mt1 pt1">Competitive Analysis</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">‍I started out this project with a survey of other motivational tools on the market. I researched 4 competitors who were either direct or indirect. Some had features I was considering for my design, but others were general motivation and organizational applications. In doing this, I learned what was good and what was bad about apps that could be similar to my own.</p>
+        </div>
+      </div>
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2">
+          <div class="center pa3 br4 bg-white">
+            <img class="mw-100" src="work/incentivize/competitor.png">
+          </div>
+        </div>
+      </div>
+<!-------------------------    Platform    -------------------------------->
+
+ <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">Ideation & Brainstorming</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">‍ Since my design solution would ideally forge a sense of community and foster values such as compassion and understanding towards people of different experiences, I chose value sensitive design to be my main approach to this problem. Brainstorming with pen and paper allowed me the space to be as imaginative as possible when it came to potential solutions to the problem. I then chose eight unique solutions to sketch out on paper.</p>
+        </div>
+      </div>
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2">
+          <div class="center pa3 br4 bg-white">
+            <img class="mw-100" src="work/incentivize/sketches.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>IDEATION:</strong>I discovered a range of possible solutions such as starting a motivation club, a browser add-on that mandates free time, and a bet on yourself gambling app. For each of the eight refined solutions, I sketched out five workflows which conveyed how each solution approached the problem</h1>
+          </div>
+        </div>
+      </div>
+
+
+<!-------------------------    Persona Creation    -------------------------------->
+
+ <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">Personas & Scenarios</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">‍Personas are crucial in understanding the user base of a product and narrowing down the focus to the target audience. I defined personas for students who are looking for motivation from their peers or who are looking to motivate peers. These students are all seeking a support system who have goals similarly aligned to their own.</p>
+        </div>
+      </div>
+      <div class="cf mw8 pb5 center">
+        <div class="cf ph2 pt2">
+          <div class="center ph3 pt3 br4 bg-white">
+            <img class="mw-100" src="work/incentivize/personas.png">
+            <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif"><strong>PERSONAS:</strong>These personas and scenarios aided me in concentrating on the needs of my major user group - tech-savvy students who seek motivation to keep up with their studies or develop a work-life balance.</h1>
+          </div>
+        </div>
+      </div>
+
+ <!-----    QOC Defence    ------->
+
+       <div class="cf pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-100-l">
+          <h2 class="system-sans-serif mt1 pt1 ">Design Synhtesis & Defence</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">In order to choose which features to implement, I used the QOC (Questions, Options, Criteria) method to help me understand the pros and cons of different options and the trade-offs amongst them. I identified the critical feature of my project and defined 3 different feature approaches with design rationales. The one critical feature is the incentivize feature.</p>
+        </div>
+      </div>
+
+ <!-----    Paper Prototype    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-30-l">
+          <h2 class="system-sans-serif mt1 pt1">Paper Prototype</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">I first had to sketch out all of the interactions in my notebook and then used paper and a thick folder to create the physical prototype. The folder had a slit in the side so that I could run the paper through so the screen was able to be changed. I sketched quickly but spent my time on thinking about the interaction layout.</p>
+        </div>
+        <div class="center pb6-l pl6-l pa0 fr w-100 w-70-l">
+          <img class="br3" src="work/incentivize/sketch.gif">
+        </div>
+      </div>
+
+
+<!-------------------------    Lo-Fi Flow    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns w-100-m w-100-ns center">
+      <div class="cf">
+         <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1 white">Lo-Fi User Journey</h2>
+          <p class="f4 fw4 lh-big system-sans-serif white">‍This flow showcases micro and larger interactions in low-fidelity. I used this fidelity prototype to test out what users thought about the interface, if the flow made sense and what could be improved upon. Users thought there was too much going on, noting the interface was "busy". I did confirm the understanding behing the carrot icon in the navigation bar as a desire to ask for an incentive.<br><br> The flows showcased below are incentivizing a friend and also editing profile information.</p>
+        </div>
+      </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/incentivize/lowfiflow.png">
+        </div>
+    </div>
+    </div>
+
+
+<!-------------------------    Visual Guideline   ------------------------------->
+
+    <div class="bg-washed-blue">
+      <div class="pa4 pv6-l pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Visual Guide</h2>
+        </div>
+        
+        <div class="cf">
+          <div class="center pv2 fl w-100 pr0 pr2-l">
+            <p class="f4 fw4 lh-big system-sans-serif">This was an exciting project in understanding what motivates people while also interviewing people about what a fun, engaging UI looks like. My inspiration was facebook and instagram in terms of UI patterns and elements involved in the design. The carrot logo was inspired by the old "carrot in front of the horse" idiom and I think it's a cute cheeky logo that people ultimately understood and liked. </strong> </p>
+          </div>
+        <div class="center pv2 fl w-100-ns">
+          <img class="br4" src="work/incentivize/incentivizeuiguide.png">
+        </div>
+        </div>
+      </div>
+    </div>
+
+<!-------------------------    Design Decisions    ------------------------------->
+
+    <div class="bg-washed-blue">
+      <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Final Design</h2>
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <p class="f4 fw4 lh-big system-sans-serif">I set out to embed motivation and incentivization into my product as it is the backbone of the app. I knew that I could do this by challenging the idea that motivation is something that’s self-directed. I wanted to promote group based and community driven motivation so that there could be a balance between work and play for students, but I can also see this transferring to work environments and sports teams/fitness clubs as well.</p>
+          </div>
+          </div>
+          </div>
+     <div class="pa4 mw8 pa6-l pa4-ns w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/incentivize/finalwireframe.png">
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <div class="bg-washed-blue">
+      <div class="cf pb6-l pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="cf f2 system-sans-serif mt1 pt1">Final Vision</h2>
+          <div class="center pt2 fl w-100 pr0 pr2-l">
+            <p class="f4 fw4 lh-big system-sans-serif">Imagine a world where finishing a problem set for a programming course would end in a beer purchased by a friend. It’s a win-win scenario! Your friend gets some quality time off from their work and you get a beer at the end of a long day of debugging code. The circle of productivity can continue too, maybe the next round is on you after your friend finishes studying for their statistics exam the following week! Incentivize isn’t meant to change the world, but it will aim to make living in a connected world as fun and as motivating as possible. </p>
+          </div>
+          </div>
+          </div>
+    </div>  
+
+
+<!-------------------------    What I learned    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">What I learned:</p>
+          </div>
+          <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">EMBED SOCIETAL NORMS</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I wanted to embed motivation and incentivization as it is the backbone of the app and a main aspect of its problem statement. I also wanted to challenge the idea that motivation is something that’s self-driven. I wanted to promote group based and community driven motivation so that there can be a balance between work and play for students. </p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">SKETCHING</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I think that sketching was incredibly helpful in getting me to where I wanted to be. It was very low stakes and I was able to iterate fast without wasting important resources. </p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+              
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>

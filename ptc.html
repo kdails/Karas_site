@@ -1,0 +1,238 @@
+<!-- ptc.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>PTC Internship</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<body>
+
+<!-------------------------    Banner Image    -------------------------------->
+
+  <div>
+    <img src="work/ptc/Liveworx.png" alt="image of Kara at LiveWorx" class="w-100 bb bw1 ">
+  </div>
+
+<!-------------------------    Project Info    -------------------------------->
+
+  <div class="bg-black">
+    <div class="pv5-l pv4-ns pa4 ph4-l ph4-ns w-70-l w-100-m w-100-ns center">
+      <div class="center">
+        <h1 class="f6-l lh-big f5 f7-ns white tracked system-sans-serif">DESIGN RESEARCH, UX DESIGN</h1>
+        <p class="f1 fw2 white system-sans-serif mt1 pt1">PTC Design Research Internship</p>
+      </div>
+    <div class="cf">
+      <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+        <h3 class=" tracked f6-l f7-ns fw8 white system-sans-serif">CONTEXT</h3>
+        <p class="f4 lh-copy fw3 white system-sans-serif">In the summer of 2019, I interned at the PTC Boston office as a design research intern on the Product Design Team. My team focused on informing the design of PTC's myriad of software products that focus on digital transformation. PTC's Suite of software products involve PLM, Augmented Reality, CAD, and ThingWorx an IOT product, which is the product I mainly focused on during my summer.</p>
+      </div>
+      <div class="center pv2 fl w-100 w-50-l pr0 pl4-l">
+        <h3 class="tracked f6-l f7-ns fw8 white system-sans-serif">TEAM</h3>
+        <p class="f4 lh-copy fw3 white system-sans-serif">Bill Cole — Director of Research and Academy<br>
+        Leisa Wert — Senior Director Design Strategy<br>
+        Kim Moroni — Director of User Research</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-------------------------    Outcome Box    ------------------------------->
+<div class="bg-white">
+    <div class="cf pt5 mw8 pb5 center">
+        <div class="cf pa4 br4 bg-custom-blue">
+          <div class="cf mw7 center">
+            <div class="center pv2 fl w-100 w-100-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 tracked system-sans-serif">OUTCOMES</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">— Created, ran and presented findings from 3 separate studies which amounted to speaking to 20 different users over 24+ hours of user interviews and testing sessions.</p>
+              <p class="f4 fw4 lh-big system-sans-serif">— Developed a new standard for recruiting participants to empower the team to quickly respond to evolving research and business needs in the future.</p>
+              <p class="f4 fw4 lh-big system-sans-serif">— Researched and explored the design of a more comprehensive documentation system for ThingWorx.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="cf mw8 pb5 center">
+        <div class="cf center ph2 pt2 br4 shade">
+          <div class="center w-100 pa3">
+            <img class="w-100" src="work/ptc/image1.png">
+              <h1 class="mw7 pb3 tc center f5 f6-l f7-ns fw5 system-sans-serif">The first image is me presenting to 30+ employees at a design thinking workshop. The next image is of me at the LiveWorx digital transformation conference during a break from user testing sessions at the UX Lab</h1>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">What I learned:</p>
+          </div>
+          <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">FOSTER A WIN WIN SCENARIO</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">I learned to efficiently collaborate with others by being mindful about their goals and think about what I can do to help them achieve that goal through our collaboration.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">QUESTIONS ARE KEY</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">Asking questions is not a sign of weakness. Instead, it is the fastest way to learn and grow.</p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">SEEK CRITIQUE</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">Being open to suggestions from different perspectives is significant; I learned to make informative decisions and advocate for them with supportive data — whether qualitative or quantitative.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <div class="pt6 pb6 pv2 mw7 center w-100-m w-100-ns center">
+        <div>
+          <p class="f4 pa3 fw4 lh-big tc center-l system-sans-serif">If you are interested in learning more about the work I did at PTC, please send me an email at kadailey@umich.edu and I would be happy to chat more.</p>
+        </div>
+      </div>
+
+</body>
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+              
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>
