@@ -1,1 +1,1 @@
-Hi this is my website repo. I host on github because it's super simple. If you're an ex-UMSI student and want information on free hosting and where to grab a cheap domain — I'm your girl! Send me an email :)
+Hi this is my website repo. Powered by tachyons.io CSS. I host on github because it's super simple. If you're an ex-UMSI student and need help with your portfolio, let me know. 
