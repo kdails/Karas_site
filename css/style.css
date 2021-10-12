@@ -2,6 +2,14 @@
     color: #1B12D9;
 }
 
+.dsg-green {
+  color: #3C8B76;
+}
+
+.dsghighlight {
+  color: #E0EDEA;
+}
+
 .div {
     transition: 0.28s;
 }

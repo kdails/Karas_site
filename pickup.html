@@ -1,0 +1,434 @@
+<!-- pickup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Pickup Refresh</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <SCRIPT language="Javascript">
+    <!-- hide
+
+    var password;
+
+    var pass1="opensesame";
+
+    password=prompt('Please enter the password found on Kara\'s resume to view the pickup project!','');
+
+    if (password==pass1)
+      alert('You got it! Click OK to enter!');
+    else
+      {
+        alert('Please reach out to Kara at karahdailey@gmail.com for the password');
+        window.location="index.html";
+      }
+
+      //-->
+    </SCRIPT>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+
+  <!-- Header -->
+  <header>
+    <!-- Nav -->
+    <nav class="cf dt w-100 bb border-box pa4 ph5-ns">
+      <div class="pt2">
+        <div class="cf fl dn dn-m dib-l w-40-l">
+          <a class="link dim dark-gray system-sans-serif f5 dib mt3 mr3 mr4-ns" href=index.html title="Kara Dailey"><strong>KARA DAILEY</strong></a>
+        </div>
+        <a class="cf dtc v-mid mid-gray link dim fl center tc-l tl w-20 w-20-m w-20-l" href=index.html title="Home">
+          <img src="klogo.gif" class="dib logo-size" alt="Kara's Site">
+        </a>
+        <div class="cf dtc v-mid fl w-80 w-80-m w-40-l tr">
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="index.html" title="work">WORK</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="play.html" title="play">PLAY</a>
+          <a class="fw4 link dim dark-gray system-sans-serif f6 f6-ns dib mt3 mr3 mr4-ns" href="about.html" title="about">ABOUT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<body>
+
+<!-------------------------    Project Info    -------------------------------->
+
+  <div class="bg-black">
+     <div>
+    <img src="work/dsg/RefreshCover.png" alt="image of pickup screens" class="w-100 bb ">
+  </div>
+    <div class="pv6-l pv4-ns pa4 ph4-l ph4-ns w-70-l w-100-m w-100-ns center">
+      <div class="center">
+        <h1 class="f6-l lh-big f5 f7-ns white tracked system-sans-serif">PRODUCT DESIGN, USER RESEARCH —</h1>
+        <p class="f2 fw3 white system-sans-serif mt1 pt1">Improving DICK'S Sporting Goods buy online pickup in store experience through human centered design</p>
+      </div>
+    <div class="cf">
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">MY ROLE</h3>
+        <p class="f4 fw3 white system-sans-serif">Product Designer</p>
+      </div>
+      <div class="center pv2 fl w-100 w-50-l pr0 pr2-l">
+        <h3 class="f6-l f7-ns fw8 white system-sans-serif">THE PRODUCT TEAM</h3>
+        <p class="f4 fw3 white system-sans-serif">3 Software Engineers<br>1 QA Engineer<br>1 Systems Specialist<br> 1 Product Manager</p>
+      </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+<!-------------------------    Problem Block    ------------------------------->
+
+    <div class="bg-white">
+      <div class="pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div>
+          <h2 class=" f2 system-sans-serif mt1 pt1">Problem</h2>
+          <p class="f4 fw4 system-sans-serif lh-big">Our fulfillment goal at Dick's Sporting Goods is to ensure customer orders are delivered as quickly as possible so our customers can get playing faster! During our product discovery we uncovered that hundreds of our in store associates had difficulties in locating customers for in store and curbside delivery which caused wasted time and customer frustation.</p>
+        </div>
+      </div>
+
+<!-----    What's the solution    ------->
+
+       <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="center pa2 fl w-100 w-40-l">
+          <h2 class="f2 system-sans-serif mt1 pt1">Solution</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">Human centered design methods guided our refresh of the web based pickup experience for both customers and Teammates alike. <br><br> The refreshed pickup experience live at DSG today features amusing, guided inputs to gather more consistent information from customers on their whereabouts when they arrive at the store to pickup their online order. <br><br></p>
+          <h2 class="f2 system-sans-serif mt1 pt1">Impact</h2>
+           <p class="f4 fw4 lh-big system-sans-serif">The refreshed design provided store teammates with consistent, useful data to locate and deliver quicker and more efficiently; <b>ultimately decreasing store delivery speed by 1.8 minutes on average which over the course of the year translates to 2 million dollars in reappropriated labor</b>... and so many less headaches!
+        </div>
+        <div class="center pa4-l pl6-l pa0 fl w-100 w-60-l">
+          <img class="br3" src="work/dsg/Main_Proto.gif">
+        </div>
+      </div>
+
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns mw8 w-100-m w-100-ns center">
+      <div class="cf">
+        <div class="center pv2 pr4-m pr6-l fl w-third-l w-third-m w-100-ns w-30">
+          <img src="work/mapme/quote.png">
+        </div>
+        <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+          <p class="f2-l f2-m f3 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">How might we assist store teammates in locating pickup customers?</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!-------------------------    Background Block    ------------------------------->
+
+    <div class="bg-white">
+      <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1">Background</h2>
+          <p class="f2 fw5 system-sans-serif mt1 pt1 dsg-green">What in the world is a BOPIS order?</p>
+          <p class="f4 fw4 lh-big system-sans-serif">At DSG, stores mainly fulfill two types of orders, SFS orders which stands for "ship to customer from store" and BOPIS Orders, "buy online pickup in store". My team, the FIT ( Fulfillment Innovation Technology ) Team owns both the fulfillment application used by store teammates to pick and pack SFS and BOPIS and deliver BOPIS orders to customers who check in for pickup with our team's web based check in experience.</p>
+        </div>
+      </div>
+      <div class="ph4 pb2 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="system-sans-serif mt1 pt1">User Journey</h2>
+          <p class="f4 fw4 lh-big system-sans-serif">To create a shared understanding in order for you to review this project, I created a very high level User Journey to showcase the core steps involved for both of our team's end users (Customers and Teammates).
+            <br></div>
+      </div>
+      <div class="cf mw8 pb2 center">
+        <div class="cf pa4 br4 bg-white">
+          <div class="cf mw6 center">
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">CORE CUSTOMER STEPS</h3>
+              <p class="f4 fw4 lh-big system-sans-serif">1. Order Placement<br> 2. Pre-Check In<br> 3. Check In <br> 4. Fulfillment <br></p>
+            </div>
+            <div class="center pv2 fl w-100 w-50-l pr0 pr4-l">
+              <h3 class="f6-l f7-ns fw8 system-sans-serif">CORE STORE TEAM STEPS </h3>
+              <p class="f4 fw4 lh-big system-sans-serif">1. Store Order Prep<br> 2. Store Team Delivery</p>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <!-----    User Flows   ------->
+
+            <div class="cf mw8 pb5 center">
+              <img class="mw-100 br4 pt2 ph2" src="work/dsg/UserFlow.png">
+            </div>
+            <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+              </div>
+
+      <!-------------------------    Design Research Block    ------------------------------->
+
+          <div class="bg-white">
+            <div class="pa4 pa4-ns mw7 w-100-m w-100-ns center">
+              <div>
+                <h2 class="f2 system-sans-serif mt1 pt1">Design Research</h2>
+                <p class="f4 fw4 lh-big system-sans-serif">One of our largest outcomes for the year was to decrease the wait time for pickup customers; less waiting time = happier customers = more $$! We can only ever be as fast as our slowest processes, so we needed to uncover the bottlenecks in our teammate's delivery process when a customer checks in to pickup their order.</p>
+              </div>
+            </div>
+            <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+              <div>
+                <h2 class="system-sans-serif mt1 pt1">Store Surveys</h2>
+                <p class="f4 fw4 lh-big system-sans-serif">‍I’m HUGE continuous discovery fan. Every other month I send out a pulse survey to our 900+ retail locations on new feature feedback, pain points and their ever changing needs. We started to notice a common pain point where teammates couldn't easily find or locate customers for store pickup! My team and I thought this would be a great space to start exploring.</p>
+                  <br></div>
+            </div>
+            <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+              <div>
+                <h2 class="system-sans-serif mt1 pt1">Contextual Inquiry</h2>
+                <p class="f4 fw4 lh-big system-sans-serif">All stores use our technology to fulfill orders so in order to learn from expert users,  I simply need to walk into a store and ask the right questions. My focus for the contextual inquiry series was to understand what was causing the inability for teammates to locate customers.</p>
+                  <p class="f4 fw4 lh-big system-sans-serif">‍It became VERY apparent after watching less than a dozen pickups at various stores that the information inputted by athletes on our check in web page was inconsistent and confusing to teammates. This caused our teammates to waste time looking for customers in incorrect locations causing teammate AND customer frustration.</p>
+                  </div>
+            </div>
+          </div>
+
+          <div class="bg-white">
+            <div class="pa4 pt6-l pa4-ns mw7 w-100-m w-100-ns center">
+              <div>
+                <h2 class="f2 system-sans-serif mt1 pt1">Define & Ideate</h2>
+                <p class="f2 fw5 system-sans-serif mt1 pt1 dsg-green i">What's your input on Inputs?</p>
+              </div>
+
+              <div class="cf">
+                <div class="center pv2 fl w-100 pr0 pr2-l">
+                  <h3 class="system-sans-serif mt1 pt1">DESIGN OPPORTUNITY</h3>
+                  <p class="f4 fw4 lh-big system-sans-serif">Based on research, we identified our design opportunity:
+                      <br> <strong>How might we assist store teammates in locating pickup customers?</strong> </p>
+                </div>
+              </div>
+              </div>
+              <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+                  <h2 class="system-sans-serif mt1 pt1">Quantitative Input Analysis</h2>
+                  <p class="f4 fw4 lh-big system-sans-serif">At this point in our process we knew the issue of customer findability was widespread. My team and I pulled a month’s worth of data from both our curbside and in store check in page inputs for deeper analysis. We wanted to understand what information customers were providing and what we were ultimately displaying to teammates on their store devices.</p>
+                    <p class="f4 fw4 lh-big system-sans-serif">‍Below are a select few inputs which highlight how unhelpful some of the inputs teammates would use to locate athletes were. It's no wonder why teammates found it difficult to locate customers at check in. </p>
+                    </div>
+              </div>
+            <!-------------------------    GIF of Bad Inputs    -------------------------------->
+              <div class="cf mw8 pb5 center">
+                <img class="mw-100 br4 pt2 ph2" src="work/dsg/BadInput.gif">
+              </div>
+              <div class="ph4 mw7 w-100-m w-100-ns center">
+                </div>
+ </p>
+<!-------------------------    Good Inputs    -------------------------------->
+
+ <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <p class="f4 fw4 lh-big system-sans-serif">‍It was very apparent that although there were many unhelpful input outliers like in the image above, there was an overarching commonality that we could leverage in the re-design when we dug in deeper and quantified the key terms used. This data was the core driver in the redesign of the check in flow so we could leverage terms and descriptors that athletes were already providing. <br> <br>
+            The image below showcases the count of keywords over a one month period of use live on the DSG check in page.</p>
+        </div>
+      </div>
+        <!-------------------------    Input Image    -------------------------------->
+          <div class="cf mw8 pb5 center">
+            <img class="mw-100 br4 pt2 ph2" src="work/dsg/InStoreInput.png">
+      </div>
+
+
+
+
+
+
+<!-------------------------    Lo Fi Flow    -------------------------------->
+
+
+    <div class="bg-black">
+    <div class="pa4 pa6-l pa4-ns w-100-m w-100-ns center">
+      <div class="cf">
+         <div class="ph4 pb4 mw7 w-100-m w-100-ns center">
+        <div>
+          <h2 class="f2 system-sans-serif mt1 pt1 white">Lo-Fi User Flow</h2>
+          <p class="f4 fw4 lh-big system-sans-serif white">‍Leveraging the information learned from the quantitative deep dive, I designed a lo-fi user flow for customers to check in and provide more accurate information so we could better assist the consumers of the inputs - our store team in charge of locating customers for delivery both curbside and in store.
+</p>
+        </div>
+      </div>
+        <div class="center pv2 fl w-100-ns">
+          <img src="work/dsg/PickupFlow.png">
+        </div>
+    </div>
+    </div>
+  </div>
+
+
+<!-------------------------    Design Decisions    ------------------------------->
+
+    <div class="bg-white">
+      <div class="pa4 pa4-ns mw8 w-100-m w-100-ns center">
+        <div><br>
+          <h2 class="f2 system-sans-serif mt1 pt1">Design Decisions</h2>
+        </div>
+      </div>
+
+      <!-----    Climate   ------->
+
+             <div class="cf pa4 pa4-ns mw8 w-100-m w-100-ns center">
+              <div class="center pa2 fl w-100 w-40-l">
+                <h2 class="system-sans-serif fw6 f5 ttu ">IN STORE CHECK IN</h2>
+                <p class="f4 fw4 lh-big system-sans-serif">Based on the quantitative analysis, We learned that the most common clothing items athletes inputted were tops. We included an "other" option for customers who were wearing other articles of clothing.
+                  <br> <br>The color button options were the top 9 colors athletes used over the month long data collection. Pink and Purple were the least popular colors and can be represented by the "other" button.
+                  <br> <br>We included the top used in store locations which were registers and the order pickup area. 95% of Athletes now use either the "Register" or "Order Pickup Area" buttons since launch.<br></p>
+              </div>
+              <div class="center pa4-l pa0 fl w-100 w-60-l">
+                <img class="br3" src="work/dsg/instore.gif">
+
+            </div>
+
+            <div class="center pa2 fl w-100 w-40-l">
+              <h2 class="system-sans-serif fw6 f5 ttu ">CURBSIDE VEHICLE DESCRIPTION</h2>
+              <p class="f4 fw4 lh-big system-sans-serif">When reviewing the vehicle inputs, we found them to be very model specific. That was not conducive to a streamlined set of buttons. We modeled the button selection off of published research on the top vehicle types used by middle class American families. When selected the "other" button drops down into a text field to support input for any outliers.
+                <br> <br>Similarly the colors represented are the most common car colors in the United States with an "other" option as well.
+            </div>
+            <div class="center pa4-l pa0 fl w-100 w-60-l">
+              <img class="br3" src="work/dsg/Curbside_Vehicle.gif">
+          </div>
+
+          <div class="center pa2 fl w-100 w-40-l">
+            <h2 class="system-sans-serif fw6 f5 ttu ">PARKING LOCATION & ORDER PLACEMENT</h2>
+            <p class="f4 fw4 lh-big system-sans-serif">The majority of our store locations have curbside spots for pickup customers to park. These are all numbered with a sign that displays the curbside spot number for customers to input. The "other" button allows for other parking lot layouts that might not meet the standard like mall garages.
+              <br> <br>In the midst of the pandemic, we recieved a lot of feedback from customers that wanted to be able to specify where the order was placed for a contact free delivery. This feature came at just the right time when the Delta variant was on the rise and has since made delivery safer and more straightforward for our store teammates who are delivering orders. The Order Placement buttons were my favorite UI Elements to design since joining DSG! They were a fun challenge to perfect in development as well!
+          </div>
+          <div class="center pa4-l pa0 fl w-100 w-60-l">
+            <img class="br3" src="work/dsg/OrderPlacement.gif">
+        </div>
+      </div>
+
+<!-------------------------    Quote Block    -------------------------------->
+
+
+    <div class="bg-black">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+          <div class="center pv2 fl w-third-l w-third-m w-100-ns">
+            <p class="f2 fw3 pl3 white system-sans-serif mt1 pt1 lh-big">Results & Impact:</p>
+          </div>
+          <div class="center pv2 fl w-two-thirds-l w-two-thirds-m w-100-ns">
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">TEAMMATE FACING UPDATES</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">The second half of this redesign was how we incorporated the new streamlined button selections into our store's teammate facing application which my team also owns. Due to my NDA, I'm not able to share any metrics, information or internal facing application screens. If you're interested in learning more about that half of the re-design, please reach out to me directly! </p>
+            <br>
+            <h1 class="f6-l f5 pl3 f7-ns white tracked system-sans-serif">BUSINESS IMPACT</h1>
+            <p class="f4 pl3 fw3 lh-copy white system-sans-serif">The refreshed design provided store teammates with consistent, useful data to locate and deliver quicker and more efficiently; <b>this ultimately decreased store delivery speed ( our main KPI ) by 1.8 minutes on average which over the course of the year translates to 2 million dollars in reappropriated labor</b>... and so many less headaches! <br><br> After Launch, we saw CSAT scores increase due to the lower wait time and several dozen comments around the new order placement feature being extremely convenient during curbside check in on our customer survey. </p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+<footer>
+
+    <div class="bg-black bt b--white pb4">
+      <div class="pa4 pv6-l pa4-ns mw8 w-100-m w-100-ns center">
+        <div class="cf">
+
+          <div class="center pv2 fl w-60-l w-100-m w-100-ns pr0 pr5-l">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Take a look at —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-yellow mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="index.html">Work</a>
+              </div>
+              <div class="center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-light-green mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="play.html">Play</a>
+              </div>
+
+              <div class="center pv2 fl w-25-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-light-red mv1 fw5 pr4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="about.html">About</a>
+              </div>
+              <div class="db center pv2 fl w-75-l w-50-m w-100-ns w-50">
+                <a class="dib hover-lightest-blue mv1 fw5 pl4-l f2-l f2-m f3 fw3 white lh-big system-sans-serif no-underline dim" href="kdaileyresume.pdf">Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="center pv2 mt4 mt4-m mt0-l fl w-40-l w-100-m w-100-ns">
+            <p class="f6 ttu fw6 mt0 mb3 bb b--white-30 pb2 white system-sans-serif">Let's Connect —</p>
+
+            <div class="cf center">
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns w-50 pr0 pr2-l">
+                <a class="dib hover-blue mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.linkedin.com/in/karadailey/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-hot-pink mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://dribbble.com/k_dails" target="_blank">Dribbble</a>
+              </div>
+              <div class="center pv2 fl w-40-l w-50-m w-100-ns pr0 pr2-l w-50">
+                <a class="dib hover-light-purple mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="https://www.instagram.com/dailey_made/" target="_blank">Instagram</a>
+              </div>
+              <div class="center pv2 fl w-60-l w-50-m w-100-ns w-50">
+                <a class="dib hover-green mv1 fw5 pr4-l f4 fw3 white lh-big system-sans-serif no-underline dim" href="mailto:kadailey@umich.edu?subject=Hey, I was looking at your portfolio..!" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cf center pv2 fl w-100">
+          <p class="dib mv1 f6 pr4-l o-60 fw3 white system-sans-serif">Designed and implemented by Kara © 2020</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+</footer>
+</html>
